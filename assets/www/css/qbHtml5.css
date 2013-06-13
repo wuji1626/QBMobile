@@ -1,0 +1,35 @@
+/* 系统封面 */
+.load
+{
+  text-align:center;padding:10px;
+  line-height:1.8em
+}
+.load .t
+{
+  padding:5px 20px 5px 20px; font-family:"黑体";
+  color:#e63f38
+}
+.load .l
+{
+  color:#666;font-size:12px
+}
+.border_p01
+{
+  width:100%; height:3px; background:#e41400;
+  margin:0; padding:0
+}
+/* 列表区域 */
+.lst
+{
+  height:100%; margin:0px;
+  padding:0px 5px 0px 5px
+}
+.lst a img
+{
+  padding:0px; max-height:50px; max-width:50px;
+  padding-top:5px;padding-bottom:5px;margin:0px
+}
+.lst a h3
+{
+  width:80%
+}
