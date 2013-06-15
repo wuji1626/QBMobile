@@ -12,6 +12,7 @@ $(document).bind('pagecreate',function(){
 
 			$("#searchreceipt").bind( "tap", function(event, ui) {
                 var userName = qbHtml5mobi.utils.getParam('user_name');
+				console.info(userName);
 				var receiptNum = "";
 				var receiptFrom = "";
 				var receiptTo = "";

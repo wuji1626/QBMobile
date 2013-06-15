@@ -30,7 +30,7 @@ $(document).bind('pagecreate',function(){
 						$("#result").html(data.name+"登录成功<br/>").css("color", "red");
 						//记录登录信息
 						qbHtml5mobi.utils.setParam('user_name',data.name);
-						console.info(data.name);
+						alert(data.name);
 						window.location.href = "index.html";
 						//.append(data[0].userName+"<br/>").css("color", "red");
 					}
