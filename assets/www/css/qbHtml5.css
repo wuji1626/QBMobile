@@ -21,15 +21,34 @@
 /* 列表区域 */
 .lst
 {
-  height:100%; margin:0px;
-  padding:0px 5px 0px 5px
+  height:70%; margin:0px;
+  padding:8px 35px 8px 35px;
 }
 .lst a img
 {
-  padding:0px; max-height:50px; max-width:50px;
-  padding-top:5px;padding-bottom:5px;margin:0px
+  padding:0px; max-height:13px; max-width:13px;
+  padding-top:0px;padding-bottom:0px;margin:0px
 }
 .lst a h3
 {
   width:80%
 }
+/*超链接格式
+a {
+color:#3399FF;
+font-weight:Normal; /*CSS字体效果 普通 可以改成bold粗体 如果去除此行那么默认是不显示下划线的
+text-decoration:none; /*CSS下划线效果：无下划线
+}
+
+a:hover {
+color:#4499EE;
+text-decoration:none; /*CSS下划线效果：无下划线
+border-bottom: 1px #0099CC dotted /*CSS加一个只有下边的框 边框为虚线
+}*/
+/* li样式 */
+li {
+list-style-type:square;
+list-style-image:url(images/new_receipt.png);
+}
+/* icon */
+.ui-icon-delete-msg {background:url('/images/delete.png') no-repeat 0 0;}

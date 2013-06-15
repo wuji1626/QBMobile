@@ -46,10 +46,11 @@ $(document).bind('pagecreate',function(){
 });
 
 function formatReceiptList(data){
-	$("#result").append("<ul data-role='listview' data-dividertheme='e'>");
+	//clear ul
+	$('ul').html('');
   	for(var i=0; i < data.length;i++){
-		var li = "<li class='lst' data-icon='false' >" + 
-		"<a href='#' data-ajax='false' style='margin:0px;padding:0px 0px 0px 55px' onclick='changeToReceiptEdit(" +data[i].receiptNum+ ")'>" +
+		var li = "<li class='lst' data-role='fieldcontain' data-icon='delete-msg'>" + 
+		"<a href='#' data-role='button' onclick='changeToReceiptEdit(" +data[i].receiptNum+ ")'>" +
 		"<font size=2>" + 
 		//申请人
 		qbHtml5mobi.constants.receiptApplicant + qbHtml5mobi.constants.colon + data[i].receiptApplicant + qbHtml5mobi.constants.space +
@@ -57,17 +58,18 @@ function formatReceiptList(data){
 		qbHtml5mobi.constants.receiptName + qbHtml5mobi.constants.colon + data[i].receiptTitle + qbHtml5mobi.constants.space +
 		//单据日期
 		qbHtml5mobi.constants.receiptDate + qbHtml5mobi.constants.colon + data[i].receiptDate + "</font></a>" +
-		"<a href='#' onclick='deleteReceipt(" + data[i].receiptNum + ")'><img src='images/delete.png' /></a>" +
+		"<a href='#' data-role='button' data-icon='delete' onclick='deleteReceipt(" + data[i].receiptNum + ")'><img src='images/delete.png' /></a>" +
 		"</li>";
-		$("#result").append(li);
+		$(li).appendTo("ul");
 	}
-	$("#result").append("</ul>");
+	$('ul').listview('refresh');
 }
 function changeToReceiptEdit(id){
   	qbHtml5mobi.utils.setParam('receipt_id',id);
 	window.location.href = "newreceipt.html";
 }
 function deleteReceipt(id){
+	if(window.confirm("是否删除？")){
 	$.ajax( {
 					async:false,
 					type:'GET',
@@ -84,4 +86,5 @@ function deleteReceipt(id){
 					    window.location.href = "index.html";
 					}
 				});	
+	}
 }
