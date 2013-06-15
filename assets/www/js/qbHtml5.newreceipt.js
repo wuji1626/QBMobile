@@ -16,7 +16,7 @@ $(document).bind('pagecreate',function(){
 					type:'GET',
 					dataType: 'jsonp',
 					jsonp: 'jsoncallback', //默认callback
-					url : 'http://127.0.0.1:8080/JAX/services/userService/getReceiptInfo',
+					url : qbHtml5mobi.website + 'getReceiptInfo',
 					data : {"receiptApplicant":userName,
 							"receiptNum":id,
 							"receiptFrom":receiptFrom,
@@ -64,7 +64,7 @@ $(document).bind('pagecreate',function(){
 					type:'GET',
 					dataType: 'jsonp',
 					jsonp: 'jsoncallback', //默认callback
-					url : 'http://127.0.0.1:9090/JAX/services/userService/saveReceiptInfo',
+					url : qbHtml5mobi.website + 'saveReceiptInfo',
 					data : {"receiptApplicant":receiptApplicant,
 							"receiptDate":receiptDate,
 							"receiptTitle":receiptTitle,

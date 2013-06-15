@@ -20,7 +20,7 @@ $(document).bind('pagecreate',function(){
 					type:'GET',
 					dataType: 'jsonp',
 					jsonp: 'jsoncallback', //Ä¬ÈÏcallback
-					url : 'http://127.0.0.1:8080/JAX/services/userService/loginUser',
+					url : qbHtml5mobi.website + 'loginUser',
 					data : {"userName":userName,"userPass":userPass},
 					contentType:'application/json',
 					error : function(msg) {
